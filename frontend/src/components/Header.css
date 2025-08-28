@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  background: #001f3f;
+  border-bottom: 2px solid #00f0ff;
+  box-sizing: border-box; /* ensure padding doesn't add width */
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  flex-shrink: 1; /* allows nav items to shrink on smaller screens */
+  overflow: hidden; /* prevent overflow */
+}
+
+
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* hide nav on mobile */
+  }
+  .mobile-menu {
+    display: block; /* show dropdown menu button */
+  }
+}

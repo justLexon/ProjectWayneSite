@@ -1,0 +1,12 @@
+.cards-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* allows cards to wrap to next line */
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 300px; /* grow, shrink, base width */
+  max-width: 400px;
+  min-width: 250px;
+}

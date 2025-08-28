@@ -53,7 +53,7 @@ export default function Header({ setCurrentPage }) {
       </div>
 
       {/* Navigation */}
-      <div className="nav">
+      <div style={{ display: "flex", gap: "20px" }}>
         {navItems.map((item) => (
           <NavItem
             key={item.name}

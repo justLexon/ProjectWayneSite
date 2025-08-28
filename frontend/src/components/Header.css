@@ -1,4 +1,5 @@
-header {
+/* Header.css */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,7 +7,22 @@ header {
   padding: 20px 20px;
   background: #001f3f;
   border-bottom: 2px solid #00f0ff;
-  box-sizing: border-box; /* ensure padding doesn't add width */
+  box-sizing: border-box; /* ensures padding doesn't add width */
+  position: relative;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #00f0ff;
+  font-weight: bold;
+  font-size: 1.4rem;
+  cursor: default;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Courier Prime', monospace;
 }
 
 .nav {
@@ -14,10 +30,42 @@ header {
   gap: 15px;
   flex-wrap: wrap;
   flex-shrink: 1; /* allows nav items to shrink on smaller screens */
-  overflow: hidden; /* prevent overflow */
+  overflow: hidden; /* prevent horizontal scroll */
 }
 
+/* Submenu styling inside NavItem */
+.nav-item {
+  position: relative;
+  cursor: pointer;
+  color: #00f0ff;
+  font-family: 'Courier Prime', monospace;
+}
 
+.nav-item .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #001f3f;
+  padding: 10px;
+  border: 1px solid #00f0ff;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 10;
+  min-width: 140px;
+}
+
+.nav-item .submenu div {
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.nav-item .submenu div:hover {
+  background: rgba(0, 255, 255, 0.2); /* neon hover effect */
+}
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .nav {
     display: none; /* hide nav on mobile */

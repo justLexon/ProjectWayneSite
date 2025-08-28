@@ -29,7 +29,7 @@ export default function Dashboard() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "flex-start",
-        padding: "20px",
+        padding: "70px",
         minHeight: "calc(100vh - 80px)",
         color: "white",
         textAlign: "center",
